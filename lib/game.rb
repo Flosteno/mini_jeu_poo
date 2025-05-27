@@ -7,11 +7,6 @@ class Game
     @ennemies_in_sight = []
     @human_player = HumanPlayer.new(name)
 
-    # for i in [1..4]
-    #   player = Player.new("joueur#{i}")
-    #   @ennemies_ << player
-    # end
-
   end
 
 
@@ -46,7 +41,6 @@ class Game
 
   def menu
 
-    # while choice != "a" && choice != "s" && choice < 0 && choice > @ennemies.length
     puts "\n-----------------------------------"
     puts "Quelle action veux-tu effectuer ?" 
     puts "a - chercher une meilleure arme"
@@ -152,6 +146,21 @@ class Game
         end
       end
     end
+  end
+
+  def self.intro
+
+    puts "-------------------------------------------------"
+  puts "|Bienvenue sur 'LA POO DUR' !                   |"
+  puts "|Le but du jeu est d'être le dernier survivant !|"
+  puts "-------------------------------------------------"
+
+  puts "\nQuel est ton prénom joueur à la POO dur ?"
+  print "> "
+  name = gets.chomp
+
+  return name
+
   end
 
 end
