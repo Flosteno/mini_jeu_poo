@@ -57,7 +57,8 @@ class HumanPlayer < Player
 
 
   def show_state
-    puts "#{name} a #{@life_points} points de vie et une arme de niveau #{@weapon_level}"
+    puts "\n#{name} a #{@life_points} points de vie et une arme de niveau #{@weapon_level}"
+    sleep 1
   end
 
 
@@ -68,7 +69,7 @@ class HumanPlayer < Player
 
   def search_weapon
     new_weapon = rand(1..6)
-    puts "Tu as trouvé une arme de niveau #{new_weapon}"
+    puts "\nTu as trouvé une arme de niveau #{new_weapon}"
 
     if @weapon_level < new_weapon
       @weapon_level = new_weapon
@@ -76,6 +77,7 @@ class HumanPlayer < Player
     else
       puts "M@*#$... elle n'est pas mieux que ton arme actuelle..."
     end
+    sleep 1
   end
 
 
@@ -83,16 +85,17 @@ class HumanPlayer < Player
     dice = rand(1..6)
 
     if dice == 1
-      puts "Tu n'as rien trouvé..."
+      puts "\nTu n'as rien trouvé..."
     elsif dice >= 2 && dice <= 5
       @life_points += 50
-      @life_points = life_points > 100 ? life_points = 100 : life_points
-      puts "Bravo tu as trouvé un pack de +50 points de vie!"
+      @life_points = 100 if @life_points > 100
+      puts "\nBravo tu as trouvé un pack de +50 points de vie!"
     else
       @life_points += 80
-      @life_points = life_points > 100 ? life_points = 100 : life_points
-      puts "Waow, tu as trouvé un pack de +80 points de vie!"
+      @life_points = 100 if @life_points > 100 
+      puts "\nWaow, tu as trouvé un pack de +80 points de vie!"
     end
+    sleep 1
   end
       
 
