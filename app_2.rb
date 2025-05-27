@@ -60,7 +60,7 @@ while user.life_points > 0 && (player1.life_points > 0 || player2.life_points > 
       next
     end
 
-    puts "Les ennemies riPOOstent !"
+    puts "Les ennemis riPOOstent !"
 
     ennemies.each do  |ennemy| 
       if ennemy.life_points > 0 && user.life_points > 0
