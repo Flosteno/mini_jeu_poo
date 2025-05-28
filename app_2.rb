@@ -28,7 +28,8 @@ while user.life_points > 0 && (player1.life_points > 0 || player2.life_points > 
   choice = ""
 
   while choice != "a" && choice != "s" && choice != "0" && choice != "1"
-    puts "\nQuelle action veux-tu effectuer ?" 
+    puts "\n-----------------------------------"
+    puts "Quelle action veux-tu effectuer ?" 
     puts "a - chercher une meilleure arme"
     puts "s - chercher à se soigner"
     puts "Attaquer un joueur en vue :"

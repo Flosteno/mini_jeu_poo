@@ -9,7 +9,7 @@ def perform
   name = Game.intro
 
   my_game = Game.new(name)
-  puts "Bien reçu! C'est l'aPOOcalypse, #{name} est dans la place !"
+  puts "\nBien reçu! C'est l'aPOOcalypse, #{name} est dans la place !"
 
   while my_game.is_still_ongoing?
 

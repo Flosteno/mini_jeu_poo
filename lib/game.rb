@@ -35,6 +35,7 @@ class Game
 
     @human_player.show_state
     puts "Il reste #{@players_left} ennemis à vaincre"
+    puts "┌( ಠ_ಠ)┘"
     sleep 1
   end
 

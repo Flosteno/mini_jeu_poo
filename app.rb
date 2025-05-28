@@ -8,8 +8,6 @@ require_relative 'lib/player'
  player2 = Player.new("José")
 
 
-
- 
  while player1.life_points > 0 && player2.life_points > 0
     puts "\nVoici l'état de chaque joueur :"
     player1.show_state
